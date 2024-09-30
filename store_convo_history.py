@@ -7,7 +7,7 @@ conversation_history = []
 
 # Define the system message
 system_message = SystemMessagePromptTemplate.from_template("You are a helpful assistant.")
-print( system_message.prompt.template)
+#print( system_message.prompt.template)
 conversation_history.append(("system", system_message.prompt.template))
 
 # Define the human message
@@ -17,7 +17,7 @@ conversation_history.append(("human", human_message.prompt.template))
 # Define the AI message
 ai_message = AIMessagePromptTemplate.from_template("New York is beautiful state and New York city is happening place.")
 conversation_history.append(("ai", ai_message.prompt.template))
-print(conversation_history)
+#print(conversation_history)
 
 
 
@@ -25,7 +25,7 @@ while True:
     user_input = input("Enter something (or type 'done' to finish): ")
     human_message = HumanMessagePromptTemplate.from_template(user_input)
     conversation_history.append(("human", human_message.prompt.template))
-    print("conversation_history  :" + str(conversation_history))
+    #print("conversation_history  :" + str(conversation_history))
     # Processing the input through the chain and converting to uppercase
     chat_prompt_template = ChatPromptTemplate(messages =conversation_history)
     chain = chat_prompt_template | chat_llm | output_parser | RunnableLambda(lambda x: x.upper())

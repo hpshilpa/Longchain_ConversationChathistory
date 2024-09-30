@@ -1,8 +1,6 @@
 
 Below is the example of the Chat converstion between AI and I : 
 
-
-
 You are a helpful assistant.
 [('system', 'You are a helpful assistant.'), ('human', 'My name is Shilpa and I live in New York?'), ('ai', 'New York is beautiful state and New York city is happening place.')]
 Enter something (or type 'done' to finish):  Name few great restaurants in New York
